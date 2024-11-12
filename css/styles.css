@@ -241,6 +241,7 @@ footer a {
   font-size: var(--fs-xxlg);
   font-weight: var(--fw-extra-bold);
   line-height: var(--lh-title);
+  color: var(--clr-neutral-50);
 }
 .results-component__results .score__total {
   font-size: var(--fs-sm);
@@ -250,6 +251,7 @@ footer a {
   font-size: var(--fs-xlg);
   font-weight: var(--fw-bold);
   margin-bottom: var(--sp-8);
+  color: var(--clr-neutral-50);
 }
 .results-component__results .description__stats {
   font-size: var(--fs-m);
