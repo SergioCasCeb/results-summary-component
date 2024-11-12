@@ -16,12 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <!-- Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script defer>
-    lucide.createIcons();
-  </script>
-
   <!-- CSS styles -->
   <link rel="stylesheet" href="/css/styles.css">
 
@@ -33,42 +27,85 @@
   <main>
     <div class="container">
       <div class="results-component">
-        
+        <div class="results-component__results">
+          <h1>Your Result</h1>
+          <div class="score">
+            <span class="score__number" id="avg-score">0</span>
+            <span class="score__total">of 100</span>
+          </div>
+          <div class="description">
+            <p class="description__text">Great</p>
+            <p class="description__stats">You scored higher than 65% of the people who have taken these test.</p>
+          </div>
+        </div>
+        <div class="results-component__summary">
+          <h2>Summary</h2>
+          <ul class="categories">
+            <li class="category category--red">
+              <div class="category__name">
+                <i data-lucide="zap" class="icon"></i>
+                <p>Reaction</p>
+              </div>
+
+              <div class="category__score">
+                <p><span class="score-value" id="score-reaction" data-category="reaction">0</span> / 100</p>
+              </div>
+            </li>
+
+            <li class="category category--orange">
+              <div class="category__name">
+                <i data-lucide="brain" class="icon"></i>
+                <p>Memory</p>
+              </div>
+
+              <div class="category__score">
+                <p><span class="score-value" id="score-memory" data-category="memory">0</span> / 100</p>
+              </div>
+            </li>
+
+            <li class="category category--green">
+              <div class="category__name">
+                <i data-lucide="message-circle-more" class="icon"></i>
+                <p>Verbal</p>
+              </div>
+
+              <div class="category__score">
+                <p><span class="score-value" id="score-verbal" data-category="verbal">0</span> / 100</p>
+              </div>
+            </li>
+
+            <li class="category category--blue">
+              <div class="category__name">
+                <i data-lucide="eye" class="icon"></i>
+                <p>Visual</p>
+              </div>
+
+              <div class="category__score">
+                <p><span class="score-value" id="score-visual" data-category="visual">0</span> / 100</p>
+              </div>
+            </li>
+          </ul>
+
+          <button class="btn btn--solid">Continue</button>
+        </div>
       </div>
     </div>
   </main>
-
-  <!-- Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue -->
 
   <footer>
     <div class="container">
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://github.com/SergioCasCeb">Sergio Eduardo Castro Ceballos</a>.
       </p>
     </div>
   </footer>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 
 </html>

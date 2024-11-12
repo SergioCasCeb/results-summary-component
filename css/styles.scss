@@ -67,27 +67,36 @@ figcaption {
 
     // Colors
     --clr-primary-red-500: hsl(0, 100%, 67%);
+    --clr-primary-red-500-transparent: hsla(0, 100%, 67%, 0.08);
+
     --clr-primary-orange-500: hsl(39, 100%, 56%);
+    --clr-primary-orange-500-transparent: hsla(39, 100%, 56%, 0.08);
+
     --clr-primary-green-500: hsl(166, 100%, 37%);
+    --clr-primary-green-500-transparent: hsla(166, 100%, 37%, 0.08);
+
     --clr-primary-blue-500: hsl(234, 85%, 45%);
+    --clr-primary-blue-500-transparent: hsla(234, 85%, 45%, 0.08);
 
     --clr-neutral-50: hsl(0, 0%, 100%);
     --clr-neutral-300: hsl(221, 100%, 96%);
     --clr-neutral-600: hsl(241, 100%, 89%);
+    --clr-neutral-600-transparent: hsla(241, 100%, 89%, 0.5);
     --clr-neutral-900: hsl(224, 30%, 27%);
+    --clr-neutral-900-transparent: hsla(224, 30%, 27%, 0.5);
 
-    --clr-gradient-bg: linear-gradient(90deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-    --clr-gradient-circle: linear-gradient(90deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    --clr-gradient-bg: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --clr-gradient-circle: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 
     //Typography
 
     --ff-primary: "Hanken Grotesk", sans-serif;
 
-    --fs-xxlg: 2rem; // 32px
-    --fs-xlg: 1.5rem; // 24px
-    --fs-lg: 1.125rem; // 18px
-    --fs-m: 1rem; // 16px
-    --fs-sm: 0.938rem; // 14px
+    --fs-xxlg: clamp(3.25rem, 2.2908163265306123rem + 4.081632653061225vw, 4.25rem); // 52px - 68px
+    --fs-xlg: clamp(1.25rem, 0.7704081632653061rem + 2.0408163265306123vw, 1.75rem); // 20px - 28px
+    --fs-lg: clamp(1.125rem, 0.8852040816326531rem + 1.0204081632653061vw, 1.375rem); // 18px - 20px
+    --fs-m: clamp(1rem, 0.9395714285714286rem + 0.2571428571428569vw, 1.063rem); // 16px - 17px
+    --fs-sm: clamp(0.938rem, 0.8785306122448978rem + 0.2530612244897961vw, 1rem); // 15px - 16rem
     --fs-xsm: 0.75rem; // 12px
 
     --fw-medium: 500;
@@ -99,6 +108,7 @@ figcaption {
 
     // Spacing
     --sp-56: 3.5rem; // 56px
+    --sp-52: 3.25rem; // 52px
     --sp-48: 3rem; // 48px
     --sp-40: 2.5rem; // 40px
     --sp-36: 2.25rem; // 36px
@@ -143,23 +153,27 @@ a {
     text-decoration: none;
 }
 
-// *:focus {
-//     outline: 2px solid var(--clr-primary-blue-500);
-//     outline-offset: 2px;
-//     border-radius: 2px;
-// }
+ul {
+    list-style: none;
+}
 
-// button {
-//     appearance: none;
-//     border: none;
-//     background-color: unset;
-//     cursor: pointer;
-// }
+*:focus {
+    outline: 2px solid var(--clr-primary-blue-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
 
 footer {
     text-align: center;
     font-size: var(--fs-xsm);
-    padding: var(--sp-8) 0;
+    padding: var(--sp-8) var(--sp-24);
     color: var(--clr-neutral-900);
 
     a {
@@ -172,11 +186,40 @@ footer {
 * Utilities
 */
 .container {
-    position: relative;
     height: 100%;
     width: 100%;
     max-width: 1440px;
-    padding: 0 var(--sp-24);
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.btn {
+    border-radius: 50vw;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-m);
+}
+
+.btn--solid {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-50);
+    padding: var(--sp-12) var(--sp-24);
+    transition: background-color 150ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: var(--clr-primary-blue-500);
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .container {
+        justify-content: center;
+    }
+}
+
+/*
+* Components
+*/
+@import 'results-component';
