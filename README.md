@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/responsive-results-summary-component-with-scss-and-js-Ds0NaUERO2)
+- Live Site URL: [Netlify](https://fm-results-component-sergio.netlify.app/)
 
 ## My process
 
