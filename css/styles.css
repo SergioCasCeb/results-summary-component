@@ -328,7 +328,7 @@ footer a {
 @media screen and (min-width: 30rem) {
   .results-component {
     border-radius: 30px;
-    box-shadow: 0 10px 20px var(--clr-neutral-600-transparent);
+    box-shadow: 0 10px 40px var(--clr-neutral-600-transparent);
   }
 }
 @media screen and (min-width: 48rem) {
